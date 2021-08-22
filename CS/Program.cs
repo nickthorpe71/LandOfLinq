@@ -9,11 +9,22 @@ namespace LINQ_Examples
         static void Main(string[] args)
         {
             Console.WriteLine(
-                new int[] {1, 2, 3, 4}
+                PositiveIntegers()
+                .Skip(3)
+                .Take(3)
                 .Select(integer => integer * 2)
                 .Min()
             );
             Console.ReadLine();
+        }
+
+        static IEnumerable<int> PositiveIntegers()
+        {
+            int currentIndex = 1;
+            while(true)
+            {
+                yield return currentIndex++;
+            }
         }
     }
 }

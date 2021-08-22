@@ -8,7 +8,9 @@ namespace LINQ_Examples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(new int[] {1, 2, 3, 4}.Sum());
+            var list = new int[] {1, 2, 3, 4};
+            var filteredList = list.Where(integer => integer % 2 == 1);
+            Console.WriteLine(filteredList.Sum());
             Console.ReadLine();
         }
     }

@@ -8,7 +8,6 @@ namespace LINQ_Examples
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             Console.WriteLine(new int[] {1, 2, 3, 4}.Sum());
             Console.ReadLine();
         }
